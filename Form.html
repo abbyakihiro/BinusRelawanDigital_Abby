@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binus Relawan Digital (BRD)</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>  
+        if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+        }
+        function validateform(){  
+            var x = document.forms["myform"]["Nama"].value;
+            var y = document.forms["myform"]["Alamat"].value;
+            var z = document.forms["myform"]["Email"].value;
+            var a = document.forms["myform"]["Telp"].value;  
+        
+            
+            if (x == ""){  
+            alert("Name can't be blank");  
+            return false;  
+                }
+            if(y == ""){
+                alert("Alamat can't be blank");
+                return false;
+            }
+            if(z == ""){
+                alert("Email can't be blank");
+                return false;
+            }
+            if(a == ""){
+                alert("Nomor Handphone can't be blank");
+                return false;
+            }
+        }
+        </script> 
+</head>
+<body>
+    <div class="body">
+    <h1>Binus Relawan Digital</h1>
+        <div class="registerbox">
+            <form name="myform" method="POST" id="registerbox" action="" onsubmit="return validateform()">
+                <h2>Registration Form</h2>
+                <label>Nama :</label><br>
+                <input type="text" name="Nama" placeholder="Nama Lengkap"
+                id="input"> <br><br>
+                <label>Alamat :</label><br>
+                <input type="text" name="Alamat" placeholder="Alamat"
+                id="input"> <br><br>
+                <label>Email :</label><br>
+                <input type="email" name="Email" placeholder="Email Address"
+                id="input"> <br><br>
+                <label>Nomor Handphone :</label><br>
+                <input type="number" name="Telp" placeholder="No Handphone"
+                id="num"> <br><br>
+                <label>Occupation :</label><br>
+                <select name="occupation" id="op">
+                    <option value="Mahasiswa">Mahasiswa</option>
+                    <option value="Dosen">Dosen</option>
+                    <option value="Staff">Staff</option>
+                </select>
+                <br><br>
+                <label>Social Media :</label><br>
+                <input type="radio" id="facebook" name="sosmed" 
+                value="facebook">
+                <label for="facebook">Facebook</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="instagram" name="sosmed" 
+                value="instagram">
+                <label for="instagram">Instagram</label><br>
+                <input type="radio" id="youtube" name="sosmed" 
+                value="youtube">
+                <label for="youtube">Youtube</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="blogger" name="sosmed" 
+                value="blogger">
+                <label for="blogger">Blogger</label><br><br>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+    </div>
+</html>
